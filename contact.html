@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- libs css  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./assets/libs/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css" />
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+  <link rel="stylesheet" href="./assets/libs/simplebar/dist/simplebar.min.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css" />
+  <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap-reboot.css" />
+  <!-- theme css  -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <title>contact us - mero pasal</title>
+</head>
+
+<body class="bg-light text-secondary">
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-md top-navbar d-none d-md-block shadow-sm">
+    <div class="container-xl">
+      <div class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">Featured Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">Wishlist</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">My Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-top" href="#">Order Tracking</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-top dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              USD
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">EUR</a></li>
+              <li><a class="dropdown-item" href="#">GBP</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-top dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              English
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Spanish</a></li>
+              <li><a class="dropdown-item" href="#">French</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Navbar and Search Section -->
+  <div class="bg-white py-4 shadow-sm">
+    <div class="container-xl">
+      <div class="d-flex align-items-center justify-content-between">
+        <!-- Logo and Mobile Nav Toggle -->
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid bi bi-toggles2 fs-5 text-dark"></i>
+          </button>
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <div class="store-logo-circle"></div>
+            <span class="fs-4 fw-bold text-dark">.Mero Pasal</span>
+          </a>
+        </div>
+
+        <!-- Main Navigation Links (Desktop) -->
+        <nav class="navbar navbar-expand-lg flex-grow-1 mx-3 d-none d-lg-block">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-link-main fw-bold text-dark" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-main fw-bold text-dark" href="#">Shop</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-main dropdown-toggle fw-bold text-dark" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Women
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-main fw-bold text-dark" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-main fw-bold text-dark" href="#">Sports <span
+                  class="badge bg-danger ms-1">New</span></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Icons and Cart -->
+        <div class="d-flex align-items-center">
+          <a href="#" class="nav-link text-dark mx-2 d-none d-sm-block">
+            <i class="fa-regular fa-heart fs-5"></i>
+          </a>
+          <a href="#" class="nav-link text-dark mx-2 position-relative cart-icon">
+            <i class="fa-solid fa-cart-shopping fs-5"></i>
+            <span class="badge rounded-pill">0</span>
+          </a>
+          <div class="ms-3 d-none d-sm-block">
+            <div class="text-muted">Total</div>
+            <div class="total-price text-dark">$0.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold text-dark" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close text-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="product-page.html">Shop</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark fw-semibold py-3 px-4" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Women
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-dark py-2 px-4" href="#">Action</a></li>
+            <li><a class="dropdown-item text-dark py-2 px-4" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item text-dark py-2 px-4" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="#">Sports</a>
+        </li>
+        <li class="nav-item">
+          <hr class="dropdown-divider" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="signup.html">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="account.html">My Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold py-3 px-4" href="order-track.html">Order Tracking</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- buttom navbar start  -->
+  <!--Bottom Navbar -->
+  <nav id="bottomNav"
+    class="d-lg-none fixed-bottom d-flex justify-content-around align-items-center rounded-pill mx-3 mb-3 shadow"
+    style="backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.25); min-height:50px;">
+
+    <!-- Shop -->
+    <a href="product-page.html" class="nav-link text-center text-dark position-relative small py-2 px-2">
+      <i class="fe fe-grid d-block fs-6 mb-0"></i>
+      <small class="d-block" style="font-size:0.65rem;">Shop</small>
+    </a>
+
+    <!-- Wishlist -->
+    <a href="wishlist.html" class="nav-link text-center text-dark position-relative small py-2 px-2">
+      <i class="fe fe-heart d-block fs-6 mb-0"></i>
+      <span class="position-absolute top-0 start-50 translate-end badge rounded-pill bg-danger"
+        style="font-size:0.55rem;">0</span>
+      <small class="d-block" style="font-size:0.65rem;">Wishlist</small>
+    </a>
+
+    <!-- Cart -->
+    <a href="cart.html" class="nav-link text-center text-dark position-relative small py-2 px-2">
+      <i class="fe fe-shopping-cart d-block fs-6 mb-0"></i>
+      <span class="position-absolute top-0 start-50 translate-end badge rounded-pill bg-danger"
+        style="font-size:0.55rem;">0</span>
+      <small class="d-block" style="font-size:0.65rem;">Cart</small>
+    </a>
+
+    <!-- Account -->
+    <a href="account.html" class="nav-link text-center text-dark small py-2 px-2">
+      <i class="fe fe-user d-block fs-6 mb-0"></i>
+      <small class="d-block" style="font-size:0.65rem;">Account</small>
+    </a>
+
+    <!-- Search -->
+    <a href="#" id="searchBtn" class="nav-link text-center text-dark small py-2 px-2">
+      <i class="fe fe-search d-block fs-6 mb-0"></i>
+      <small class="d-block" style="font-size:0.65rem;">Search</small>
+    </a>
+
+  </nav>
+
+  <!-- seatch bar modal popup of buttom Nav -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-pill" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);">
+        <div class="modal-body p-2">
+          <div class="input-group">
+            <input type="text" class="form-control rounded-pill" placeholder="Search products..." autofocus>
+            <button class="btn btn-danger rounded-pill" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- buttom navbar end  -->
+
+  <!-- Main Content Section -->
+    <!-- Hero Section -->
+    <section class="bg-dark text-white py-5">
+      <div class="container text-center">
+        <h1 class="display-4">Get in Touch</h1>
+        <p class="lead">We’d love to hear from you! Reach out to us via the contact form below, or find our contact details.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5">
+      <div class="container-xl">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <h3 class="text-center fw-bold mb-4">Contact Us</h3>
+
+                <form>
+                  <!-- Full Name -->
+                  <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+
+                  <!-- Message -->
+                  <div class="mb-3">
+                    <label for="message" class="form-label fw-semibold">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      placeholder="Enter your message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit -->
+                  <button type="submit" class="btn btn-danger w-100 rounded-pill">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="bg-white py-5">
+      <div class="container-xl">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="d-flex justify-content-center">
+              <i class="fas fa-map-marker-alt fs-3 text-primary me-3"></i>
+              <div>
+                <h5 class="fw-bold">Our Address</h5>
+                <p class="text-muted">Tripureshwor, Kathamndu, Nepal</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="d-flex justify-content-center">
+              <i class="fas fa-phone-alt fs-3 text-primary me-3"></i>
+              <div>
+                <h5 class="fw-bold">Call Us</h5>
+                <p class="text-muted">+977 9742274871</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="d-flex justify-content-center">
+              <i class="fas fa-envelope fs-3 text-primary me-3"></i>
+              <div>
+                <h5 class="fw-bold">Email Us</h5>
+                <p class="text-muted"><a href="mailto:contact@company.com">contact@iclick.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Map Integration -->
+    <section class="py-5">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="text-center fw-bold mb-4">Our Location</h4>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.google.com/maps/place/IMS+Software+Pvt.+Ltd./@27.691918,85.3135731,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19ad7e054029:0xdd50323e8798531d!8m2!3d27.691918!4d85.316148!16s%2Fg%2F1tqpxnpf?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container-xl">
+      <div class="row">
+        <!-- Column 1: Logo and Description -->
+        <div class="col-md-3 mb-4 mb-md-0">
+          <a class="d-flex align-items-center mb-3" href="#">
+            <div class="store-logo-circle w-8 h-8 me-2"></div>
+            <span class="fs-4 fw-bold text-white">.Mero Pasal</span>
+          </a>
+          <p class="text-muted">
+            A modern e-commerce platform built for the digital age, offering
+            the best products at the best prices.
+          </p>
+        </div>
+        <!-- Company Info Section -->
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5 class="fw-bold text-uppercase">Company</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Careers</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Press</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5 class="fw-bold text-uppercase">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Shop</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-muted text-decoration-none d-block py-1">FAQs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-md-3 mb-4 mb-md-0">
+          <h5 class="fw-bold text-uppercase">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="text-muted">
+              <i class="bi bi-geo-alt-fill me-2"></i> Tripureshwor, Kathamndu,
+              Nepal
+            </li>
+            <li class="text-muted">
+              <i class="bi bi-telephone me-2"></i> +977 9742274871
+            </li>
+            <li class="text-muted">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:contact@company.com" class="text-muted text-decoration-none">contact@iclick.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="col-md-3 mb-4 mb-md-0 justify-content-between">
+          <h5 class="fw-bold text-uppercase">Follow Us</h5>
+          <div>
+            <a href="#" class="text-muted me-3 fs-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-muted me-3 fs-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-muted me-3 fs-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-muted fs-3"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <h5 class="fw-bold text-uppercase mb-3">
+            Subscribe to Our Newsletter
+          </h5>
+          <p class="mb-4">
+            Get the latest updates and offers delivered straight to your
+            inbox.
+          </p>
+          <form class="d-flex justify-content-center">
+            <input type="email" class="form-control text-muted w-50" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-danger ms-2">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="mb-0">
+            &copy; 2025 iclick.com. All rights reserved. Designed by
+            <a href="#" class="text-white text-decoration-none">JibanBudhathoki</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- javascript  -->
+  <script src="./assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- libs js  -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/list.js/dist/list.min.js"></script>
+  <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+
+  <!-- theme js  -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
