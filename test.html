@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 4 Product Card Grid</title>
+
+  <!-- Bootstrap CSS (v4.6) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    xintegrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqYyq2Aj8p5GWE0Lw5w/bxhW+o3A6+m/r8zT"
+    crossorigin="anonymous">
+
+  <!-- Font Awesome for Heart and Cart Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* MINIMAL CUSTOM CSS - Primarily for transitions and effects and **image size fix** */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f7f7;
+      /* Specific background color */
+    }
+
+    .product-card {
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Essential for positioning badge/icon and clipping corners */
+    .card-img-container {
+      position: relative;
+      overflow: hidden;
+      /* NEW: Force 1:1 aspect ratio for image container */
+      padding-top: 100%;
+    }
+
+    /* NEW: Ensure image covers the 1:1 container without distortion */
+    .card-img-container .card-img-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensures image covers the space without distortion */
+    }
+
+    /* Discount Badge Styling (Top Left) */
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      padding: 4px 8px;
+      /* Custom padding */
+      font-size: 0.75rem;
+      /* Custom font size */
+    }
+
+    /* Wishlist Icon Styling (Top Right) */
+    .wishlist-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s;
+    }
+
+    .wishlist-icon:hover {
+      color: #dc3545;
+      /* Red on hover */
+    }
+
+    /* Card Body Typography Refinements */
+    .card-brand {
+      font-size: 0.8rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .current-price {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .original-price {
+      font-size: 0.9rem;
+      /* FIX: Ensure line-through is applied */
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">Featured Products</h2>
+    <div class="row">
+
+      <!-- Product Card Component 1 (Concealer Set) -->
+      <div class="col-6 col-lg-4 d-flex align-items-stretch mb-4">
+        <div class="card product-card w-100 shadow-sm rounded-lg">
+          <div class="card-img-container bg-white rounded-lg">
+            <!-- Discount Badge -->
+            <span class="discount-badge bg-danger text-white font-weight-bold rounded">20% Off</span>
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon">
+              <i class="far fa-heart text-secondary"></i>
+            </div>
+            <!-- Mock Image (Replace with a real product image URL) -->
+            <img src="/assets/images/products/1.jpg" class="card-img-top img-fluid rounded-lg"
+              alt="Lavish Color Correcting Concealer">
+          </div>
+          <div class="card-body px-2 py-3">
+            <p class="card-brand text-secondary mb-0 pt-1">MOIRA Cosmetics</p>
+            <h5 class="card-title text-dark text-truncate mb-1">Lavish Color Correcting Concealer</h5>
+
+            <!-- Price and Cart Button Container -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-baseline">
+                <span class="current-price text-dark">Rs. 1024</span>
+                <span class="original-price text-muted">Rs. 1280</span>
+              </div>
+              <button class="btn btn-sm btn-danger rounded-pill">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card Component 2 (Eye Palette) -->
+      <div class="col-6 col-lg-4 d-flex align-items-stretch mb-4">
+        <div class="card product-card w-100 shadow-sm rounded-lg">
+          <div class="card-img-container bg-white rounded-lg">
+            <!-- Discount Badge -->
+            <span class="discount-badge bg-danger text-white font-weight-bold rounded">60% Off</span>
+            <!-- Wishlist Icon (Filled Heart on this one as an example) -->
+            <div class="wishlist-icon">
+              <i class="fas fa-heart text-danger"></i>
+            </div>
+            <!-- Mock Image (Replace with a real product image URL) -->
+            <img src="/assets/images/products/2.jpg" class="card-img-top img-fluid rounded-lg"
+              alt="Nude Matte Eye Palette">
+          </div>
+          <div class="card-body px-2 py-3">
+            <p class="card-brand text-secondary mb-0 pt-1">Make Up Studio</p>
+            <h5 class="card-title text-dark text-truncate mb-1">Make Up Studio Eye Palette Nude Matt...</h5>
+
+            <!-- Price and Cart Button Container -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-baseline">
+                <span class="current-price text-dark">Rs. 2496</span>
+                <span class="original-price text-muted">Rs. 6240</span>
+              </div>
+              <button class="btn btn-sm btn-danger rounded-pill">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card Component 3 (Brow Definer) -->
+      <div class="col-6 col-lg-4 d-flex align-items-stretch mb-4">
+        <div class="card product-card w-100 shadow-sm rounded-lg">
+          <div class="card-img-container bg-white rounded-lg">
+            <!-- Discount Badge -->
+            <span class="discount-badge bg-danger text-white font-weight-bold rounded">25% Off</span>
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon">
+              <i class="far fa-heart text-secondary"></i>
+            </div>
+            <!-- Mock Image (Replace with a real product image URL) -->
+            <img src="/assets/images/products/3.jpg" class="card-img-top img-fluid rounded-lg"
+              alt="Make Up Studio Brow Definer">
+          </div>
+          <div class="card-body px-2 py-3">
+            <p class="card-brand text-secondary mb-0 pt-1">Make Up Studio</p>
+            <h5 class="card-title text-dark text-truncate mb-1">Make Up Studio Brow Definer - Nr. 2 D...</h5>
+
+            <!-- Price and Cart Button Container -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-baseline">
+                <span class="current-price text-dark">Rs. 1125</span>
+                <span class="original-price text-muted">Rs. 1500</span>
+              </div>
+              <button class="btn btn-sm btn-danger rounded-pill">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card Component 4 (Placeholder) -->
+      <div class="col-6 col-lg-4 d-flex align-items-stretch mb-4">
+        <div class="card product-card w-100 shadow-sm rounded-lg">
+          <div class="card-img-container bg-white rounded-lg">
+            <!-- No Badge on this one as an example -->
+            <!-- Wishlist Icon -->
+            <div class="wishlist-icon">
+              <i class="far fa-heart text-secondary"></i>
+            </div>
+            <!-- Mock Image (Replace with a real product image URL) -->
+            <img src="/assets/images/products/4.jpg" class="card-img-top img-fluid rounded-lg"
+              alt="New Product Placeholder">
+          </div>
+          <div class="card-body px-2 py-3">
+            <p class="card-brand text-secondary mb-0 pt-1">Brand X</p>
+            <h5 class="card-title text-dark text-truncate mb-1">Product Title Example for New Item</h5>
+
+            <!-- Price and Cart Button Container (No original price here) -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-baseline">
+                <span class="current-price text-dark">Rs. 899</span>
+              </div>
+              <button class="btn btn-sm btn-danger rounded-pill">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    xintegrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    xintegrity="sha384-9/reFTGAW83EW2RMRD5p9jV17D1P9OQ2F5F3k7E8mR/PzT" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    xintegrity="sha384-7y2I26wW1IbcWj0s61I26w1I4e+v4zW+q9B8zD5o4V3y1v/4zE9fKk1oK8L4x1A6Q=="
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

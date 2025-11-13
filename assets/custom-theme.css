@@ -1,0 +1,409 @@
+/* Custom Categories Sidebar Styles */
+.custom-categories-sidebar {
+  max-width: 320px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-accordion .accordion-item {
+  border: none;
+  background: transparent;
+}
+
+.custom-accordion .accordion-button {
+  padding: 1rem 1.25rem;
+  background: transparent;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.store-logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #dc3545;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Mobile Menu Styles */
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+  max-height: calc(100vh - 70px);
+}
+
+.nav-scroller::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nav-scroller::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.menu-link {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--bs-danger);
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  transform: translateX(5px);
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.menu-link i {
+  transition: transform 0.3s ease;
+}
+
+.menu-link:hover i {
+  transform: scale(1.2);
+}
+
+.dropdown-menu {
+  animation: slideIn 0.3s ease;
+  margin-top: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offcanvas {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.offcanvas.show {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas-title {
+  transition: transform 0.3s ease;
+}
+
+.offcanvas-title:hover {
+  transform: scale(1.05);
+}
+
+.custom-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(220, 53, 69, 0.1);
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+.hover-effect:hover .category-icon {
+  transform: scale(1.1);
+}
+
+.custom-list .list-group-item {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.category-link {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.category-link:hover {
+  color: #dc3545;
+  transform: translateX(5px);
+}
+
+.custom-accordion .badge {
+  font-size: 0.7rem;
+  padding: 0.35em 0.65em;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:hover .badge {
+  transform: scale(1.1);
+}
+
+/* Animation for accordion collapse */
+.accordion-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for the sidebar */
+.custom-categories-sidebar .offcanvas-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-categories-sidebar .offcanvas-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-categories-sidebar .offcanvas-body::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 10px;
+}
+
+.custom-categories-sidebar .offcanvas-body::-webkit-scrollbar-thumb:hover {
+  background: #bb2d3b;
+}
+
+/* mobile menu css------------------- start */
+/* Enhanced Professional Mobile Menu Styles */
+.mobile-menu-pro {
+  border-radius: 0 24px 24px 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* Animated Logo */
+.store-logo-circle.pulse-animation {
+  background: linear-gradient(45deg, #dc3545, #ff6b6b);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: linear-gradient(45deg, #dc3545, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Custom Close Button */
+.btn-close-custom {
+  border: none;
+  background: transparent;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.btn-close-custom i {
+  font-size: 24px;
+  color: #6c757d;
+}
+
+.btn-close-custom:hover {
+  background: rgba(220, 53, 69, 0.1);
+  transform: rotate(90deg);
+}
+
+/* Quick Action Buttons */
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #495057;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quick-action-btn i {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #dc3545;
+}
+
+.quick-action-label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+/* Menu Items */
+.menu-link-pro {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #495057;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  margin: 4px 12px;
+}
+
+.menu-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.menu-link-pro:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(220, 53, 69, 0.1),
+    rgba(255, 107, 107, 0.1)
+  );
+  color: #dc3545;
+}
+
+.menu-link-pro:hover .menu-icon {
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu Animation */
+.animate-menu {
+  animation: slideIn 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 12px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submenu Indicator */
+.submenu-indicator {
+  transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown.show .submenu-indicator {
+  transform: rotate(180deg);
+}
+
+/* Section Title */
+.menu-section-title {
+  padding: 16px 24px 8px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Divider */
+.nav-divider {
+  margin: 12px 24px;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Social Links */
+.offcanvas-footer {
+  padding: 20px;
+  background: linear-gradient(to top, #f8f9fa, transparent);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #6c757d;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #fff;
+  background: #dc3545;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
+
+/* Nav Scroller */
+.nav-scroller {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.nav-scroller::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-scroller::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.nav-scroller::-webkit-scrollbar-thumb {
+  background: #dee2e6;
+  border-radius: 3px;
+}
+
+.nav-scroller::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+/* Badge Styling */
+.badge.bg-danger {
+  font-size: 10px;
+  padding: 4px 8px;
+  font-weight: 500;
+}
+/* mobile menu css-------------end */

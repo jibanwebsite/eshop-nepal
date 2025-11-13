@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+.total-price {
+  font-weight: 600;
+}
+
+.cart-icon .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fa1104;
+  color: white;
+  font-size: 0.75rem;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom dropdown hover behavior */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Logo styles */
+.store-logo-circle {
+  background-color: #fd0000;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.top-navbar {
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.nav-link.nav-link-top,
+.navbar-brand {
+  color: #6c757d !important;
+}
+.nav-link-top:hover,
+.nav-link-main:hover,
+.navbar-brand:hover {
+  color: #000000 !important;
+}
+.nav-link-main {
+  color: #212529 !important;
+}
+.search-container .form-control {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: none;
+  padding: 0.75rem 1rem;
+}
+.search-container .btn-search {
+  background-color: #fc3a4d;
+  color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.75rem 1.5rem;
+}
+.search-container .btn-search:hover {
+  background-color: #c32838;
+}
+.total-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Brands Section */
+.brands-section {
+  background-color: #ffffff;
+}
+.brand-logo {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+.brand-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+/* brand animation  */
+.brands-slider {
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover (desktop only) */
+@media (hover: hover) {
+  .brands-slider:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Adjust logo size for very small screens */
+@media (max-width: 576px) {
+  .brands-section img {
+    max-width: 90px;
+  }
+}
+/* product page  */
+/* Sidebar */
+.filter-sidebar {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+/* Products */
+.product-card {
+  transition: all 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+.product-card img {
+  height: 260px;
+  object-fit: cover;
+}
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+/* Price Slider */
+.price-value {
+  font-weight: 600;
+  color: #333;
+}
+/* Sorting bar */
+.sort-bar {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+/* footer  */
+footer .col-md-3 {
+  margin-bottom: 20px;
+}
+/* ordered track css  */
+.tracking-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+.tracking-step {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.tracking-step::before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #0d6efd;
+}
+.tracking-step.completed::before {
+  background-color: #28a745;
+}
+.tracking-step::after {
+  content: "";
+  position: absolute;
+  left: 0.625rem;
+  top: 1rem;
+  width: 2px;
+  height: calc(100% - 1rem);
+  background-color: #dee2e6;
+}
+.tracking-step:last-child::after {
+  display: none;
+}
+.table thead th {
+  vertical-align: middle;
+}
+.status-badge {
+  padding: 0.35em 0.7em;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  color: #fff;
+}
+.status-pending {
+  background-color: #ffc107;
+}
+.status-processing {
+  background-color: #0d6efd;
+}
+.status-shipped {
+  background-color: #17a2b8;
+}
+.status-delivered {
+  background-color: #28a745;
+}
+.status-cancelled {
+  background-color: #dc3545;
+}
+
+/* Payment Method CSS */
+.payment-option {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  transition: border 0.3s;
+  flex-basis: calc(50% - 0.5rem); /* Two per row on mobile */
+}
+
+.payment-option input:checked + .payment-logo {
+  border: 2px solid #dc3545; /* Bootstrap danger color */
+  border-radius: 8px;
+}
+
+.payment-logo {
+  width: 100%;
+  max-width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* categories section */
+
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #fff;
+  border: none;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.category-count {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.cta-banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.cta-banner .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.cta-banner .banner-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cta-banner .banner-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .category-card img {
+    height: 150px;
+  }
+
+  .cta-banner .banner-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-banner .banner-content p {
+    font-size: 1rem;
+  }
+}
